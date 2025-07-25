@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业管理后台 - 角色管理</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="dashboard.html" class="navbar-brand">企业管理后台</a>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="#" class="navbar-link">退出登录</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <div class="main-container">
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li class="sidebar-item"><a href="dashboard.html" class="sidebar-link">控制台</a></li>
+                <li class="sidebar-item"><a href="user_management.html" class="sidebar-link">用户管理</a></li>
+                <li class="sidebar-item"><a href="role_management.html" class="sidebar-link active">角色管理</a></li>
+                <li class="sidebar-item"><a href="permission_settings.html" class="sidebar-link">权限设置</a></li>
+            </ul>
+        </aside>
+
+        <!-- 内容区域 -->
+        <main class="content">
+            <div class="page-header">
+                <h1 class="page-title">角色管理</h1>
+                <p class="page-description">创建和管理系统角色，分配权限</p>
+            </div>
+
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2 style="font-size: 16px;">角色列表</h2>
+                    <button class="btn btn-primary">创建角色</button>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>角色名称</th>
+                            <th>描述</th>
+                            <th>用户数量</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>超级管理员</td>
+                            <td>系统最高权限，管理所有功能</td>
+                            <td>1</td>
+                            <td>
+                                <button class="btn btn-outline">编辑</button>
+                                <button class="btn btn-outline">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>普通用户</td>
+                            <td>基本操作权限，无管理功能</td>
+                            <td>15</td>
+                            <td>
+                                <button class="btn btn-outline">编辑</button>
+                                <button class="btn btn-outline">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>部门管理员</td>
+                            <td>管理部门内用户和数据</td>
+                            <td>3</td>
+                            <td>
+                                <button class="btn btn-outline">编辑</button>
+                                <button class="btn btn-outline">删除</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

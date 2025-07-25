@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业管理后台 - 用户管理</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="dashboard.html" class="navbar-brand">企业管理后台</a>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="#" class="navbar-link">退出登录</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <div class="main-container">
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li class="sidebar-item"><a href="dashboard.html" class="sidebar-link">控制台</a></li>
+                <li class="sidebar-item"><a href="user_management.html" class="sidebar-link active">用户管理</a></li>
+                <li class="sidebar-item"><a href="role_management.html" class="sidebar-link">角色管理</a></li>
+                <li class="sidebar-item"><a href="permission_settings.html" class="sidebar-link">权限设置</a></li>
+            </ul>
+        </aside>
+
+        <!-- 内容区域 -->
+        <main class="content">
+            <div class="page-header">
+                <h1 class="page-title">用户管理</h1>
+                <p class="page-description">管理系统用户账户，分配角色和权限</p>
+            </div>
+
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2 style="font-size: 16px;">用户列表</h2>
+                    <button class="btn btn-primary">添加用户</button>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>用户名</th>
+                            <th>邮箱</th>
+                            <th>角色</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>admin</td>
+                            <td>admin@example.com</td>
+                            <td>超级管理员</td>
+                            <td>启用</td>
+                            <td>
+                                <button class="btn btn-outline">编辑</button>
+                                <button class="btn btn-outline">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>user1</td>
+                            <td>user1@example.com</td>
+                            <td>普通用户</td>
+                            <td>启用</td>
+                            <td>
+                                <button class="btn btn-outline">编辑</button>
+                                <button class="btn btn-outline">删除</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

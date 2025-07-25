@@ -1,0 +1,282 @@
+/* 全局样式重置与基础设置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #165DFF;
+    --secondary-color: #0E42D2;
+    --accent-color: #36CFC9;
+    --text-color: #1D2129;
+    --text-secondary: #4E5969;
+    --border-color: #C9CDD4;
+    --bg-color: #F2F3F5;
+    --card-bg: #FFFFFF;
+    --success-color: #00B42A;
+    --warning-color: #FF7D00;
+    --danger-color: #F53F3F;
+    --light-gray: #F7F8FA;
+    --dark-gray: #86909C;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* 容器与布局组件 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 卡片样式 */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* 表单样式 */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(22, 93, 255, 0.1);
+}
+
+/* 按钮样式 */
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: rgba(22, 93, 255, 0.05);
+}
+
+/* 登录页面特有样式 */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo h1 {
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    width: auto;
+    margin-right: 6px;
+}
+
+.forgot-password {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--dark-gray);
+}
+
+/* 表格样式 */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table th {
+    font-weight: 500;
+    color: var(--text-secondary);
+    background-color: var(--light-gray);
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: var(--card-bg);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    padding: 0 20px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar-brand {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-item {
+    margin-left: 24px;
+}
+
+.navbar-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    width: 220px;
+    background-color: var(--card-bg);
+    border-right: 1px solid var(--border-color);
+    min-height: calc(100vh - 60px);
+    padding-top: 20px;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-item {
+    margin-bottom: 4px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    background-color: rgba(22, 93, 255, 0.05);
+    color: var(--primary-color);
+}
+
+/* 主内容区布局 */
+.main-container {
+    display: flex;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.page-header {
+    margin-bottom: 20px;
+}
+
+.page-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.page-description {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
